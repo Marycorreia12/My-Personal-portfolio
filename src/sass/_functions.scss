@@ -1,0 +1,17 @@
+/* Font Weight */
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
+
+/* Font Size */
+@function size($size-name){
+    @return map-get($font-size, $size-name);
+}
+
+@function set-text-color($color){
+    @if(lightness($color) < 40%){
+        @return #fff;
+    } @else {
+        @return #000;  
+    }
+}

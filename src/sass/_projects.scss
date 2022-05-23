@@ -1,0 +1,116 @@
+/* Projects */
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+
+    .card {
+        background: #fff;
+        box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 320px;
+        height: 280px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: .5rem;
+    
+        .image {
+            position: relative;
+            display: inline-block;
+            object-fit: cover;
+            width: 100%;
+            height: 300px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 1s ease-in-out;
+                    position: relative;
+                    overflow: hidden;
+                }
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(100%);
+            transition: all .5s linear;
+            border-radius: 5px;
+
+            h3 {
+                font-size: size(large);
+            }
+                
+            ul.social {
+                margin-top: .5rem;
+
+                li {
+                    a {
+                        &:before {
+                            background-color: #fff;
+                        }
+                    }
+            
+                }
+            }
+        }
+            
+        &:hover .overlay{
+            transform: translateY(0);
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+@media (max-width: 980px){
+    .grid-3{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+
+        .card{
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 736px){
+    .grid-3{
+        grid-template-columns: 1fr;
+
+        .card{
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
+
+
+@media (max-width: 500px){
+    .grid-3{
+        .card{
+            .overlay{
+                h3{
+                    font-size: size(small);
+                }
+            } 
+        }
+    }
+}

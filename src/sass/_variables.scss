@@ -1,0 +1,30 @@
+$primary-color: #43B3E0;
+$secondary-color: #43bff0;
+$white: #fff;
+$gray: #888;
+$ligth-gray: #bbb;
+$medium-gray: #555;
+$dark-gray: #3e3e3e;
+$black: #000000;
+
+$font-size: (
+    "XX-large": 4.3333rem,
+    "X-large": 2.6667rem,
+    "large": 2rem,
+    "medium": 1.6rem,
+    "small": 1.4rem,
+    "x-small": 1.08rem
+);
+
+$font-weights: (
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semiBold":600,
+    "bold": 700
+);
+
+$desktop_lg: 1278px;
+$desktop_md: 980px;
+$tablet: 736px;
+$mobile: 440px;

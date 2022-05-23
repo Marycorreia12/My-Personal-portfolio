@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<title>Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="My personal portfolio to show the works I have done so far"/>
+		<meta name="keywords" content="HTML, CSS, JavaScript, portfolio website">
+		<meta name="author" content="Maria Santos">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="src/css/main.css" />
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">	
+	</head>
+	<body>
+
+		<!-- Nav -->
+		<header class="header">
+			<nav id="nav">
+				<ul class="container">
+					<li class="item"><a href="index.html">Home</a></li>
+					<li class="item"><a href="about.html">About me</a></li>
+					<li class="item"><a href="projects.html">Projects</a></li>
+					<li class="item"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="fa-solid fa-bars menu"></div>
+		</header>
+			
+		<!-- Work -->
+		<article id="about" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>About me.</h2>
+				</header>
+				<div class="container-box">
+					<section class="card" data-aos="fade-left">
+						<div class="image">
+							<img src="src/images/fotoPrincipal-compressed.jpg" alt="">
+						</div>
+						<div class="about-p bg">
+							<p>Currently finishing the course in telecommunications and computer engineering at ISCTE, and making some projects with React js.
+							This passion for web development started in 2020 when I started taking a frontend course at udemy and since then I've been doing projects like Clone some websites and creating websites from some figma templates.</p>
+							<p>
+							I have some backend knowledge using the java language with Rest API and Spring framework and in the future I intend to become a fullstack developer.
+							</p>
+						</div>
+					</section>
+					<section class="card" data-aos="fade-right">
+						<div class="box">
+							<h3>Professional <br> experience</h3>
+						</div>
+						<div class="box-content bg">
+							<h4>2018-2020</h4>
+							<p>Remote Project Management</p>
+							<p>Nokia</p>
+						</div>	
+						
+					</section>
+				</div>
+				<div class="btn" >
+					<a href="#portfolio" class="button large">See some of my projects.</a>
+				</div>
+			</div>
+		</article>
+
+		<!-- Scripts -->
+			<script src="src/index.js"></script>
+			<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+				<script>
+					AOS.init({
+						duration: 1000,
+						delay: 200,
+						offset: 400
+					});
+				</script>
+	</body>
+</html>
