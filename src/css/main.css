@@ -135,6 +135,7 @@ form {
 form .grid {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
@@ -232,7 +233,8 @@ hr {
 .grid-3 {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 0 1rem;
 }
@@ -254,8 +256,15 @@ hr {
 .grid-3 .card .image {
   position: relative;
   display: inline-block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 300px;
 }
@@ -264,8 +273,8 @@ hr {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
@@ -323,7 +332,8 @@ hr {
 
 @media (max-width: 980px) {
   .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     padding: 0 1rem;
   }
   .grid-3 .card {
@@ -355,40 +365,28 @@ hr {
 #about .container-box .card {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 1rem;
   height: auto;
 }
 
 #about .container-box .card .image {
-  width: 60%;
-  height: 300px;
-  margin-left: 6rem;
   position: relative;
   z-index: 99;
-  /*   &::after{
-                        content: '';
-                        position: absolute;
-                        border: 4px solid #AFAFAF;
-                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                        width: 276px;
-                        height: 290px;
-                        bottom: 1rem;
-                        left: 1rem;
-                        z-index: -8;
-                        border-radius: 5px 0 5px 0;
-                    } */
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #about .container-box .card .image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
   opacity: 0.8;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #about .container-box .card:nth-child(even) img, #about .container-box .card .box {
@@ -446,13 +444,28 @@ hr {
 }
 
 #about .container-box .card .about-p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1rem;
+  min-height: 320px;
 }
 
 #about .container-box .card .about-p p {
   margin-bottom: 1rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   text-align: left;
+  font-weight: 600;
 }
 
 @media (max-width: 736px) {
@@ -462,7 +475,20 @@ hr {
     margin: auto;
     margin-bottom: 1rem;
   }
-  #about .container-box .card .image, #about .container-box .card .box {
+  #about .container-box .card .image {
+    margin-bottom: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #about .container-box .card .box {
     margin-bottom: 1rem;
   }
 }
@@ -476,6 +502,7 @@ body, input, textarea, select {
 
 body {
   overflow-x: hidden;
+  color: #3e3e3e;
 }
 
 a {
@@ -700,7 +727,6 @@ button.alt:active,
 
 @media (max-width: 736px) {
   .wrapper {
-    padding: 2rem 0;
     min-height: 80vh;
   }
   input[type="button"],

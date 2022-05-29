@@ -17,6 +17,7 @@ body, input, textarea, select {
 
 body{
 	overflow-x: hidden;
+	color: $dark-gray;
 }
 
 a{
@@ -29,7 +30,6 @@ h1 {
     letter-spacing: -0.025em;
     font-weight: weight(regular);
 }
-
 h2 {
     font-size: size(X-large);
     letter-spacing: -0.015em;
@@ -217,7 +217,6 @@ input[type="button"],
 
 	@media (max-width: 736px){
 		.wrapper {
-			padding: 2rem 0;
 			min-height: 80vh;
 		}
 			input[type="button"],
@@ -235,25 +234,25 @@ input[type="button"],
 		}
 	}	
 
-	
-@media (max-width: 500px){
-	input[type="button"],
-			input[type="submit"],
-			input[type="reset"],
-			button,
-			.button {
-				font-size: .8rem;
-			&.large {
-				font-size: .8em;
-				width: 80%;
+		
+	@media (max-width: 500px){
+		input[type="button"],
+				input[type="submit"],
+				input[type="reset"],
+				button,
+				.button {
+					font-size: .8rem;
+				&.large {
+					font-size: .8em;
+					width: 80%;
 
-			}
-			&.alt {
-				width: 100%;
+				}
+				&.alt {
+					width: 100%;
 
-			}
+				}
+		}
 	}
-}
 
 	#home{
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
